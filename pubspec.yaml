@@ -1,0 +1,29 @@
+name: multiserver_ping
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.1 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  dart_ping: ^9.0.1
+  fl_chart: ^0.66.2
+  google_fonts: ^6.2.1
+  flutter_native_splash: ^2.4.0
+  yaml: ^3.1.2
+  color_picker_field: ^2.1.0
+  get: ^4.6.6
+  get_storage: ^2.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/servers.yml
+    - assets/images/

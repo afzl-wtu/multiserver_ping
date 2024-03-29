@@ -1,0 +1,54 @@
+servers:
+  - title: Google
+    enable: true
+    urls:
+      - google.com
+  - title: Facebook
+    enable: true
+    urls:
+      - facebook.com
+  - title: Twitter
+    enable: true
+    urls:
+      - twitter.com
+  - title: Oracle
+    enable: true
+    prefix: iaas.
+    suffix: .oraclecloud.com
+    codes:
+      - ap-sydney-1: 'Sydney, Australia'
+      - ap-melbourne-1: 'Melbourne, Australia'
+      - sa-saopaulo-1: 'Sao Paulo, Brazil'
+      - sa-vinhedo-1: 'Vinhedo, Brazil'
+      - ca-montreal-1: 'Montreal, Canada'
+      - ca-toronto-1: 'Toronto, Canada'
+      - sa-santiago-1: 'Santiago, Chile'
+      - eu-paris-1: 'Paris, France'
+      - eu-marseille-1: 'Marseille, France'
+      - eu-frankfurt-1: 'Frankfurt, Germany'
+      - ap-hyderabad-1: 'Hyderabad, India'
+      - ap-mumbai-1: 'Mumbai, India'
+      - il-jerusalem-1: 'Jerusalem, Israel'
+      - eu-milan-1: 'Milan, Italy'
+      - ap-osaka-1: 'Osaka, Japan'
+      - ap-tokyo-1: 'Tokyo, Japan'
+      - mx-queretaro-1: 'Queretaro, Mexico'
+      - mx-monterrey-1: 'Monterrey, Mexico'
+      - eu-amsterdam-1: 'Amsterdam, Netherlands'
+      - me-jeddah-1: 'Jeddah, Saudi Arabia'
+      - eu-jovanovac-1: 'Jovanovac,Serbia'
+      - ap-singapore-1: 'Singapore,Singapore'
+      - af-johannesburg-1: 'Johannesburg, South Africa'
+      - ap-seoul-1: 'Seoul, South Korea'
+      - ap-chuncheon-1: 'Chuncheon, South Korea'
+      - eu-madrid-1: 'Madrid, Spain'
+      - eu-stockholm-1: 'Stockholm, Sweden'
+      - eu-zurich-1: 'Zurich, Switzerland'
+      - me-abudhabi-1: 'Abu Dhabi, UAE'
+      - me-dubai-1: 'Dubai, UAE'
+      - uk-london-1: 'London, United Kingdom'
+      - uk-cardiff-1: 'Newport, United Kingdom'
+      - us-ashburn-1: 'Ashburn, VA'
+      - us-chicago-1: 'Chicago, IL'
+      - us-phoenix-1: 'Phoenix, AZ'
+      - us-sanjose-1: 'San Jose, CA'
