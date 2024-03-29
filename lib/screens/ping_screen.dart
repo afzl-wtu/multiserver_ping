@@ -58,7 +58,7 @@ class _PingScreenState extends State<PingScreen> {
                   _groupController.multistartPing();
                 },
                 child: const Card(
-                    color: Colors.indigo,
+                    color: Colors.green,
                     child: Padding(
                       padding:
                           EdgeInsets.symmetric(horizontal: 40, vertical: 12),
@@ -171,7 +171,7 @@ class _PingScreenState extends State<PingScreen> {
                           _groupController.selectedServers.last.pings.clear();
                         },
                         child: const Card(
-                            color: Colors.indigo,
+                            color: Colors.green,
                             child: Padding(
                               padding: EdgeInsets.symmetric(
                                   horizontal: 30, vertical: 8),
