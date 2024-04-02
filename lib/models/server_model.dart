@@ -67,8 +67,10 @@ class ServerModel {
         // (event.response!.time != null)
         //     ? event.response!.time?.inMilliseconds.toDouble()
         //     : 0;
-        pings.add(FlSpot(event.response!.seq!.toDouble(),
-            event.response!.time?.inMilliseconds.toDouble() ?? 0));
+        if (event.response!.time != null) {
+          pings.add(FlSpot(event.response!.seq!.toDouble(),
+              event.response!.time?.inMilliseconds.toDouble() ?? 0));
+        }
       }
     });
   }

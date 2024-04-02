@@ -1,16 +1,8 @@
-# multiserver_ping
+# Multiserver Ping
 
-A new Flutter project.
+The pupose of this app is to ping multiple servers at once. Thus you can check which servers perform better in network latency from source device. Or in simple words which server is nearest to you in a given network. Always use server with most minimum latency if you want more responsiveness.
 
-## Getting Started
+## Servers
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+You can create a group and then add your own servers or ips in that group. And then select those servers and hit play button. Selected servers remain persistent even on app restarts.
+Current servers include only Oracle cloud server. More are on the way.

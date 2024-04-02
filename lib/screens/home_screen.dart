@@ -2,8 +2,9 @@ import 'dart:developer' as console;
 import 'package:multiserver_ping/models/group_model.dart';
 import 'package:color_picker_field/color_picker_field.dart';
 import 'package:flutter/material.dart';
-import 'package:multiserver_ping/screens/location.dart';
+import 'package:multiserver_ping/screens/servers_screen.dart';
 import 'package:get/get.dart';
+import 'package:multiserver_ping/screens/ping_screen.dart';
 
 import '../core/group_controller.dart';
 
@@ -37,9 +38,40 @@ class _HomeScreenState extends State<HomeScreen> {
               })),
               onPressed: groupController.selectedServers.isEmpty
                   ? null
-                  : groupController.selectedServers.clear,
+                  : () => Get.dialog(AlertDialog(
+                        title: const Text('Delete Servers'),
+                        content: const Text(
+                            'Are you sure you want to delete selected servers?'),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              groupController.selectedServers.clear();
+                              Get.back();
+                            },
+                            child: const Text('Yes'),
+                          ),
+                          TextButton(
+                            onPressed: Get.back,
+                            child: const Text('No'),
+                          ),
+                        ],
+                      )),
               icon: const Icon(Icons.delete),
-              label: Text(groupController.selectedServers.length.toString())))
+              label: Text(groupController.selectedServers.length.toString()))),
+          // Play Button Icon to open ping screen
+          Obx(() => IconButton(
+                style: ButtonStyle(
+                    iconColor: MaterialStateProperty.resolveWith((states) {
+                  console.log(states.toString());
+                  return states.isEmpty ? Colors.green : null;
+                })),
+                onPressed: groupController.selectedServers.isEmpty
+                    ? null
+                    : () {
+                        Get.to(() => const PingScreen());
+                      },
+                icon: const Icon(Icons.play_arrow),
+              ))
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -254,7 +286,7 @@ class ServerTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () => Get.to(
-        () => Locations(group),
+        () => ServersScreen(group),
       ),
       onLongPress: () {
         showDialog(

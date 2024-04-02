@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/homescreen.dart';
+import 'screens/home_screen.dart';
 
 class LogicalScreen extends StatelessWidget {
   const LogicalScreen({super.key});

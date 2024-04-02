@@ -5,15 +5,15 @@ import 'package:multiserver_ping/models/server_model.dart';
 import 'package:multiserver_ping/screens/ping_screen.dart';
 import 'package:get/get.dart';
 
-class Locations extends StatefulWidget {
-  const Locations(this.group, {super.key});
+class ServersScreen extends StatefulWidget {
+  const ServersScreen(this.group, {super.key});
   final GroupModel group;
 
   @override
-  State<Locations> createState() => _LocationsState();
+  State<ServersScreen> createState() => _ServersScreenState();
 }
 
-class _LocationsState extends State<Locations> {
+class _ServersScreenState extends State<ServersScreen> {
   @override
   Widget build(BuildContext context) {
     final groupController = Get.find<GroupController>();
@@ -25,12 +25,15 @@ class _LocationsState extends State<Locations> {
           ),
           actions: [
             Obx(
-              () => TextButton(
+              () => IconButton(
                 onPressed: groupController.selectedServers.isEmpty
                     ? null
                     : () => Get.to(() => const PingScreen()),
-                child: const Text(
-                  'Next',
+                icon: Icon(
+                  Icons.play_arrow,
+                  color: groupController.selectedServers.isEmpty
+                      ? null
+                      : Colors.green,
                 ),
               ),
             ),

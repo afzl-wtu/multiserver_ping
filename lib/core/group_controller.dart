@@ -10,6 +10,7 @@ import '../models/group_model.dart';
 import '../models/server_model.dart';
 
 class GroupController extends GetxController {
+  final isPlaying = false.obs;
   final groups = <GroupModel>[].obs;
   final selectedServers = <ServerModel>[].obs;
   final _box = GetStorage();
